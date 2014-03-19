@@ -1,0 +1,8 @@
+*
+!README.md
+!.gitignore
+!.zshrc
+!.zsh
+!.zsh/*
+!.zsh/plugin
+!.zsh/plugin/*
