@@ -48,15 +48,13 @@ insert-last-command-output() {
 zle -N insert-last-command-output
 bindkey '^x' insert-last-command-output
 
-# Ctrl+space : print Git/Svn status or list files with ls
+# Ctrl+space : print git status or list files with ls
 vcs-status() {
   \print; zle accept-line;
-  if [ -d .git ]; then
-	git status --short 
-  elif [ -d .svn ]; then
-	svn status
+  if [ $(git rev-parse --is-inside-worktree 2> /dev/null) ]; then
+	git status --short
   else
-	l # use the "l" alias for ls
+	l 
   fi
   zle accept-line;
 }

@@ -2,6 +2,11 @@ HISTFILE=$HOME/.zsh/hist/zsh-`date +%Y-%W`.hist
 HISTSIZE=10000
 SAVEHIST=10000
 
+if [ ! -d $(dirname $HISTFILE) ]
+then
+   mkdir -p $(dirname $HISTFILE)
+fi
+
 if [ ! -f $HISTFILE ]
 then
    LASTHIST=$HOME/.zsh/hist/`ls -1tr $HOME/.zsh/hist/ | tail -1`
