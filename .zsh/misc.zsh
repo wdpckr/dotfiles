@@ -1,3 +1,7 @@
+if [[ -f $HOME/.buildenv/default ]]; then
+	source $HOME/.buildenv/default
+fi 
+
 PLATFORM=`uname -s`
 
 if [[ "$PLATFORM" == "Darwin" ]]; then
