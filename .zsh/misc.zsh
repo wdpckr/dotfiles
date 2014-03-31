@@ -1,5 +1,5 @@
 if [[ -z "$TERM" ]]; then
-	export TERM=xterm-256color
+	export TERM=xterm-color
 fi
 
 if [[ -f $HOME/.buildenv/default ]]; then
