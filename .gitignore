@@ -7,3 +7,8 @@
 !.zsh/*
 !.zsh/plugin
 !.zsh/plugin/*
+!.zsh/plugin/darwin
+!.zsh/plugin/darwin/*
+!.zsh/plugin/linux
+!.zsh/plugin/linux/*
+
