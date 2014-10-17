@@ -15,9 +15,13 @@ fi
 PLATFORM=`uname -s`
 
 if [[ "$PLATFORM" == "Darwin" ]]; then
-	for config_file ($HOME/.zsh/plugin/darwin/*.zsh) source $config_file
-fi 	
+	if [[ -d $HOME/.zsh/plugin/darwin ]]; then
+		for config_file ($HOME/.zsh/plugin/darwin/*.zsh) source $config_file
+	fi
+fi
 	
 if [[ "$PLATFORM" == "Linux" ]]; then
-	for config_file ($HOME/.zsh/plugin/linux/*.zsh) source $config_file
-fi 	
+	if [[ -d $HOME/.zsh/plugin/linux ]]; then
+		for config_file ($HOME/.zsh/plugin/linux/*.zsh) source $config_file
+	fi
+fi
